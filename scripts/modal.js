@@ -59,9 +59,9 @@ export function inicialGame() {
 
         if (window.location.pathname === '/index.html') {
             modal.remove();
-            location.href = 'startGame.html';
-        } else if (window.location.pathname === '/startGame.html') {
-            resetGame()
+            location.href = 'page/startGame.html';  // Caminho correto para o arquivo dentro da pasta 'page'
+        } else if (window.location.pathname === '/page/startGame.html') {  // Verificando o caminho correto do startGame
+            resetGame();
             modal.remove();
         }
 

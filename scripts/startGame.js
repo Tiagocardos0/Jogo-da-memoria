@@ -244,7 +244,7 @@ if (btnClassification) {
 
 if (btnBack) {
     btnBack.addEventListener('click', () => {
-        location.href = 'index.html';
+        location.href = '../index.html';
     });
 }
 
