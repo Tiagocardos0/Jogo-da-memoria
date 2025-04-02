@@ -1,0 +1,93 @@
+@import url('global.css');
+
+body {
+    background-color: #533d8aaa;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    overflow: hidden;
+}
+
+.containerBanner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    justify-items: center;
+    padding: 20px;
+    position: relative;
+    perspective: 1500px;
+}
+
+.containerImageBanner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: #0a0146;
+    border-radius: 20px;
+    margin: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transform-origin: center;
+    animation: shuffle3D 5s ease-in-out infinite;
+    opacity: 0.9;
+}
+
+.containerImageBanner img {
+    width: 50px;
+    height: 50px;
+}
+
+.container-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+
+@keyframes shuffle3D {
+    0% {
+        transform: rotateY(0deg) translate(0, 0) scale(1);
+        /* Estado inicial */
+    }
+
+    25% {
+        transform: rotateY(180deg) translate(50px, -50px) scale(1.1);
+        /* Giro de 180 graus + deslocamento */
+    }
+
+    50% {
+        transform: rotateY(90deg) translate(-50px, 50px) scale(0.9);
+        /* Giro de 90 graus e movimentação */
+    }
+
+    75% {
+        transform: rotateY(270deg) translate(40px, -40px) scale(1.1);
+        /* Giro de 270 graus */
+    }
+
+    100% {
+        transform: rotateY(360deg) translate(0, 0) scale(1);
+        /* Retorno ao estado original */
+    }
+}
+
+.containerImageBanner:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.containerImageBanner:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.containerImageBanner:nth-child(3) {
+    animation-delay: 2s;
+}
+
+.containerImageBanner:nth-child(4) {
+    animation-delay: 3s;
+}
