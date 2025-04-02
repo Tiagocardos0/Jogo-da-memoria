@@ -57,13 +57,14 @@ export function inicialGame() {
         playerList.push({ name: playerName.value });
         localStorage.setItem('player', playerName.value);
 
-        if (window.location.pathname === '/index.html') {
+        if (window.location.pathname.endsWith('index.html')) {
             modal.remove();
             location.href = 'page/startGame.html';  // Caminho correto para o arquivo dentro da pasta 'page'
-        } else if (window.location.pathname === '/page/startGame.html') {  // Verificando o caminho correto do startGame
+        } else if (window.location.pathname.endsWith('startGame.html')) {  // Verificando o caminho correto do startGame
             resetGame();
             modal.remove();
         }
+        
 
     });
     
